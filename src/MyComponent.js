@@ -5,7 +5,7 @@ export let itemType = "신발";
 
 function MyComponent() {
   const [formData, setFormData] = useState({
-    fname: "이세호",
+    fname: "뉴 샌달",
     fprice: "3000000",
     ftype: "신발",
     fdate: new Date().toISOString().substring(0, 10),
