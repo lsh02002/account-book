@@ -37,24 +37,10 @@
 
 .main-sort {
   width: 500px;
-  height: 40px;
+  height: 80px;
   border: 1px solid red;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-}
-
-.main-dropdown-1 {
-  width: 60px;
-  height: 20px;
-
-  border: 1px solid red;
-}
-
-.main-dropdown-2 {
-  width: 60px;
-  height: 20px;
-
-  border: 1px solid red;
 }

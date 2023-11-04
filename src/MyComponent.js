@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import DropDown from "./DropDown";
+
+export let itemType = "신발";
 
 function MyComponent() {
   const [formData, setFormData] = useState({
@@ -65,12 +68,11 @@ function MyComponent() {
 
         <label>
           유형{" "}
-          <input
-            type="text"
-            name="ftype"
-            value={formData.ftype}
-            onChange={changeHandle}
-            required
+          <DropDown
+            menuName="상품 유형"
+            param1="신발"
+            param2="옷"
+            param3="가구"
           />
         </label>
 
@@ -109,10 +111,33 @@ function MyComponent() {
         <button type="submit">입력하기</button>
       </form>
       <form className="main-sort">
-        <div className="main-dropdown-1"></div>
-        <div className="main-dropdown-2"></div>
-        <div className="main-first-date"></div>
-        <div className="main-second-date"></div>
+        <DropDown
+          menuName="상품 유형"
+          param1="신발"
+          param2="옷"
+          param3="가구"
+        />
+        <DropDown
+          menuName="정렬 기준"
+          param1="가격 높은 순"
+          param2="가격 낮은 순"
+          param3="최신 순"
+          param4="오래된 순"
+        />
+        <div className="main-first-date">
+          시작 기간
+          <input
+            type="date"
+            value={new Date().toISOString().substring(0, 10)}
+          />
+        </div>
+        <div className="main-second-date">
+          끝 기간
+          <input
+            type="date"
+            value={new Date().toISOString().substring(0, 10)}
+          />
+        </div>
       </form>
       <div className="main-output"></div>
     </div>
