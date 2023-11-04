@@ -1,4 +1,3 @@
-import "./MyComponent.css";
 import React, { useState } from "react";
 
 function MyComponent() {

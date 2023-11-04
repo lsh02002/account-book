@@ -1,3 +1,4 @@
+import "./App.css";
 import MyComponent from "./MyComponent";
 
 function App() {
